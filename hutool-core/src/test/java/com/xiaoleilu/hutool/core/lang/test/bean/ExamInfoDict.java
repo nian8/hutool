@@ -4,56 +4,57 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * 
  * @author 质量过关
- *
  */
 public class ExamInfoDict implements Serializable {
-	private static final long serialVersionUID = 3640936499125004525L;
-	
-	// 主键
-	private Integer id; // 可当作题号
-	// 试题类型 客观题 0主观题 1
-	private Integer examType;
-	// 试题是否作答
-	private Integer answerIs;
+    private static final long serialVersionUID = 3640936499125004525L;
 
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    // 主键
+    private Integer id; // 可当作题号
+    // 试题类型 客观题 0主观题 1
+    private Integer examType;
+    // 试题是否作答
+    private Integer answerIs;
 
-	public Integer getExamType() {
-		return examType;
-	}
-	public void setExamType(Integer examType) {
-		this.examType = examType;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public Integer getAnswerIs() {
-		return answerIs;
-	}
-	public void setAnswerIs(Integer answerIs) {
-		this.answerIs = answerIs;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		ExamInfoDict that = (ExamInfoDict) o;
-		return Objects.equals(id, that.id) && Objects.equals(examType, that.examType) && Objects.equals(answerIs, that.answerIs);
-	}
+    public Integer getExamType() {
+        return examType;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, examType, answerIs);
-	}
+    public void setExamType(Integer examType) {
+        this.examType = examType;
+    }
 
-	@Override
-	public String toString() {
-		return "ExamInfoDict{" + "id=" + id + ", examType=" + examType + ", answerIs=" + answerIs + '}';
-	}
+    public Integer getAnswerIs() {
+        return answerIs;
+    }
+
+    public void setAnswerIs(Integer answerIs) {
+        this.answerIs = answerIs;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ExamInfoDict that = (ExamInfoDict) o;
+        return Objects.equals(id, that.id) && Objects.equals(examType, that.examType) && Objects.equals(answerIs, that.answerIs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, examType, answerIs);
+    }
+
+    @Override
+    public String toString() {
+        return "ExamInfoDict{" + "id=" + id + ", examType=" + examType + ", answerIs=" + answerIs + '}';
+    }
 }
